@@ -37,5 +37,11 @@ const arrayTeam = [
 //Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
 for (let i = 0; i < arrayTeam.length; i++) {
     let memberTeam = arrayTeam[i];
+    //Stampare le stesse informazioni su DOM sottoforma di stringhe
+    for (let member in memberTeam) {
+        document.writeln(member, ':', memberTeam[member]);
+    }
 }
 console.log(arrayTeam);
+
+
