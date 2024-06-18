@@ -32,4 +32,10 @@ const arrayTeam = [
         'name': 'Tengen Uzui',
         'work': "Pilastro del Suono",
     },
-]
+];
+
+//Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
+for (let i = 0; i < arrayTeam.length; i++) {
+    let memberTeam = arrayTeam[i];
+}
+console.log(arrayTeam);
