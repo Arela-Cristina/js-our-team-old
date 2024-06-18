@@ -4,34 +4,49 @@ const boxTeam = document.getElementById('boxMembers');
 
 const arrayTeam = [
     {
-        'picture': 'Photography',
+        'picture': 'pilastri/kyojuro-rengoku.jpg',
         'name': 'Kyojuro Rengoku',
         'work': 'Pilastro delle Fiamme',
     },
     {
-        'picture': 'Photography',
+        'picture': 'pilastri/muichiro-tokito.jpg',
         'name': 'Muichiro Tokito',
         'work': 'Pilastro della Nebbia',
     },
     {
-        'picture': 'Photography',
+        'picture': 'pilastri/mitsuri-kanroji.jpg',
         'name': 'Mitsuri Kanroji',
         'work': "Pilastro dell'Amore",
     },
     {
-        'picture': 'Photography',
+        'picture': 'pilastri/giyu-tomioka.jpg',
         'name': 'Giyu Tomioka',
         'work': "Pilastro del Acqua",
     },
     {
-        'picture': 'Photography',
+        'picture': 'pilastri/kanae-kocho.jpg',
         'name': 'Shinobu Kocho',
         'work': "Pilastro degli Insetti",
     },
     {
-        'picture': 'Photography',
+        'picture': 'pilastri/tengen-uzui.jpg',
         'name': 'Tengen Uzui',
         'work': "Pilastro del Suono",
+    },
+    {
+        'picture': 'pilastri/obanai-iguro.jpg',
+        'name': 'Obanai Iguro',
+        'work': "Pilastro dei Serpenti",
+    },
+    {
+        'picture': 'pilastri/gyomei-himejima.jpg',
+        'name': 'Gyomei Himejima',
+        'work': "Pilastro della Pietra",
+    },
+    {
+        'picture': 'pilastri/sanemi-shinazugawa.jpg',
+        'name': 'Sanemi Shinazugawa',
+        'work': "Pilastro del Vento",
     },
 ];
 
@@ -41,13 +56,14 @@ for (let i = 0; i < arrayTeam.length; i++) {
     let memberTeam = arrayTeam[i];
     //Stampare le stesse informazioni su DOM sottoforma di stringhe
     let content = document.createElement('div');
-    content.innerHTML = `${memberTeam.picture}, ${memberTeam.name} , ${memberTeam.work}`;
+    content.classList.add('box-pilastri');
+    content.innerHTML = `<img src="${memberTeam.picture}"></img> ${memberTeam.name}<br>  ${memberTeam.work}`;
+    let imgElement = content.querySelector('img');
+    imgElement.classList.add('width');
+
     boxTeam.append(content);
 }
 
 console.log(arrayTeam);
 
 
-// for (let member in memberTeam) {
-//     //     document.writeln(member, ':', memberTeam[member]);
-//     // }
