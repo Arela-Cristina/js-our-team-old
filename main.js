@@ -1,5 +1,6 @@
 //Utilizzando i dati forniti, creare un array di oggetti per rappresentare i membri del team.
 //Ogni membro è caratterizzato dalle seguenti informazioni: nome, ruolo e foto.
+const boxTeam = document.getElementById('boxMembers');
 
 const arrayTeam = [
     {
@@ -40,10 +41,8 @@ for (let i = 0; i < arrayTeam.length; i++) {
     let memberTeam = arrayTeam[i];
     //Stampare le stesse informazioni su DOM sottoforma di stringhe
     let content = document.createElement('div');
-    memberTeam.InnerHTML = arrayTeam[i];
-    content.append(arrayTeam[i]);
-
-
+    content.innerHTML = `${memberTeam.picture}, ${memberTeam.name} , ${memberTeam.work}`;
+    boxTeam.append(content);
 }
 
 console.log(arrayTeam);
